@@ -144,6 +144,9 @@ def ensure_session_state():
 
 
 ensure_session_state()
+codex/build-decisionpilot-ai-enterprise-platform-k26tfx
+
+=======
 =======
 =======
 =======
@@ -156,6 +159,7 @@ if 'risks_data' not in st.session_state:
     st.session_state.risks_data = None
 if 'kpi_data' not in st.session_state:
     st.session_state.kpi_data = None
+main
 
 # Initialize modules
 @st.cache_resource

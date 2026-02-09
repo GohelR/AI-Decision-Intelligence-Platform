@@ -1,5 +1,17 @@
 """Streamlit entrypoint for DecisionPilot AI."""
 
+codex/build-decisionpilot-ai-enterprise-platform-k26tfx
+from app import main as app_main
+
+
+def run():
+    """Run the DecisionPilot AI Streamlit application."""
+    app_main()
+
+
+if __name__ == "__main__":
+    run()
+=======
     def create_kpi_trends(self, kpi_df: pd.DataFrame) -> go.Figure:
         """Create KPI trend dashboard"""
         df = kpi_df.copy()
@@ -56,3 +68,4 @@ if __name__ == "__main__":
     from app import main
 
     main()
+main

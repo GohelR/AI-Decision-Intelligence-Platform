@@ -4,6 +4,11 @@ uvicorn==0.24.0
 
 numpy>=1.26.4
 pandas>=2.2.2
+codex/build-decisionpilot-ai-enterprise-platform-k26tfx
+
+scikit-learn>=1.4.2
+=======
+main
 
 scikit-learn>=1.4.2
 =======
@@ -15,6 +20,9 @@ scikit-learn>=1.4.2
 plotly
 requests
 rich<14
+codex/build-decisionpilot-ai-enterprise-platform-k26tfx
+=======
 =======
 =======
 requests
+main
