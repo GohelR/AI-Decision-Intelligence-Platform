@@ -144,7 +144,22 @@ def ensure_session_state():
 
 
 ensure_session_state()
+codex/build-decisionpilot-ai-enterprise-platform-k26tfx
 
+=======
+=======
+=======
+=======
+# Initialize session state
+if 'data_loaded' not in st.session_state:
+    st.session_state.data_loaded = False
+if 'sales_data' not in st.session_state:
+    st.session_state.sales_data = None
+if 'risks_data' not in st.session_state:
+    st.session_state.risks_data = None
+if 'kpi_data' not in st.session_state:
+    st.session_state.kpi_data = None
+main
 
 # Initialize modules
 @st.cache_resource
