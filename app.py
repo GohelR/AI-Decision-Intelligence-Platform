@@ -135,6 +135,16 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
+def ensure_session_state():
+    """Ensure required session state keys exist."""
+    st.session_state.setdefault('data_loaded', False)
+    st.session_state.setdefault('sales_data', None)
+    st.session_state.setdefault('risks_data', None)
+    st.session_state.setdefault('kpi_data', None)
+
+
+ensure_session_state()
+=======
 # Initialize session state
 if 'data_loaded' not in st.session_state:
     st.session_state.data_loaded = False
@@ -144,6 +154,7 @@ if 'risks_data' not in st.session_state:
     st.session_state.risks_data = None
 if 'kpi_data' not in st.session_state:
     st.session_state.kpi_data = None
+
 
 
 # Initialize modules
@@ -171,6 +182,7 @@ def load_data():
 
 def main():
     """Main application"""
+    ensure_session_state()
     
     # Header
     st.markdown('<div class="main-header">🧠 DecisionPilot AI</div>', unsafe_allow_html=True)
@@ -201,7 +213,7 @@ def main():
             st.sidebar.success("✅ Data loaded successfully!")
     
     # Check if data is loaded
-    if not st.session_state.data_loaded:
+    if not st.session_state.get('data_loaded', False):
         st.warning("⚠️ Please load sample data from the sidebar to continue.")
         return
     
