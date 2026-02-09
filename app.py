@@ -13,7 +13,7 @@ import os
 from advisor import BusinessAdvisor
 from predictor import BusinessPredictor
 from simulator import BusinessSimulator
-from dashboard import BusinessDashboard
+from analytics_dashboard import BusinessDashboard
 
 
 # Page configuration
@@ -146,6 +146,7 @@ def ensure_session_state():
 ensure_session_state()
 =======
 =======
+=======
 # Initialize session state
 if 'data_loaded' not in st.session_state:
     st.session_state.data_loaded = False
@@ -155,8 +156,6 @@ if 'risks_data' not in st.session_state:
     st.session_state.risks_data = None
 if 'kpi_data' not in st.session_state:
     st.session_state.kpi_data = None
-
-
 
 # Initialize modules
 @st.cache_resource
